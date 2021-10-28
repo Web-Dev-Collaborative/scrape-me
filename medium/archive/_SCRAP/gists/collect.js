@@ -1,4 +1,4 @@
-(function () {
+(() => {
   var startTime = +new Date();
 
   var FileSystem = require("fs");
@@ -25,8 +25,10 @@
   });
 
   function comparePaths(a, b) {
-    if (a === b) return 0;
-    if (!isLocalPath(a) || !isLocalPath(b)) return 0;
+    if (a === b)
+      return 0;
+    if (!isLocalPath(a) || !isLocalPath(b))
+      return 0;
     var p1 = a.split(/[\/\\]+/);
     var p2 = b.split(/[\/\\]+/);
     if (p1.length !== p2.length) {
@@ -51,7 +53,8 @@
       var stat = FileSystem.statSync(file);
       if (stat && stat.isDirectory())
         results = results.concat(readdirRecursiveSync(file));
-      else results.push(file);
+      else
+        results.push(file);
     });
     return results;
   }
@@ -117,17 +120,13 @@
   sortedFiles.forEach(function (f) {
     var i = 0;
     if (/\.(js|ts|coffee)$/.test(f)) {
-      while (
-        i < bundle.scripts.length &&
-        comparePaths(f, bundle.scripts[i]) > 0
-      )
+      while (i < bundle.scripts.length &&
+        comparePaths(f, bundle.scripts[i]) > 0)
         ++i;
       bundle.scripts.insert(i, f);
     } else if (/\.(css|less|sass|scss)$/.test(f)) {
-      while (
-        i < bundle.stylesheets.length &&
-        comparePaths(f, bundle.stylesheets[i]) > 0
-      )
+      while (i < bundle.stylesheets.length &&
+        comparePaths(f, bundle.stylesheets[i]) > 0)
         ++i;
       bundle.stylesheets.insert(i, f);
     }
