@@ -1,5 +1,3 @@
-
-
 # Fundamental Data Structures In JavaScript
 
 Data structures in JavaScript
@@ -12499,7 +12497,6 @@ By <a href="https://medium.com/@bryanguner" class="p-author h-card">Bryan Guner<
 
 Exported from [Medium](https://medium.com) on August 24, 2021.
 
-
 # Postgresql Cheat Sheet
 
 PostgreSQL commands
@@ -18994,10 +18991,8 @@ The **string** data type is a primitive data type that used to represent textual
 - <span id="e1b0">can be wrapped by either **single** or **double** quotation marks, _best to choose one and stick with it for consistency_.</span>
 - <span id="f8ad">If your string contains quotation marks inside, can layer single or double quotation marks to allow it to work.  
    “That’s a great string”; (valid)
-    
-   ‘Shakespeare wrote, “To be or not to be”’; (valid)
-    
-   ‘That’s a bad string’; (invalid)</span>
+  ‘Shakespeare wrote, “To be or not to be”’; (valid)
+  ‘That’s a bad string’; (invalid)</span>
 - <span id="b2cb">Alt. way to add other quotes within strings is to use template literals.  
    \`This is a temp’l’ate literal ${function}\` // use ${} to invoke functions within.</span>
 - <span id="7b1a">**.length** : property that can be appended to data to return the length.</span>
@@ -32621,4 +32616,3 @@ By <a href="https://medium.com/@bryanguner" class="p-author h-card">Bryan Guner<
 <a href="https://medium.com/@bryanguner/writing-files-using-python-d46b4851366f" class="p-canonical">Canonical link</a>
 
 Exported from [Medium](https://medium.com) on August 24, 2021.
-
